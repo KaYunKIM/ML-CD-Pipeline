@@ -32,3 +32,10 @@
    - 승인을 하면 다음 stage로 넘어가고, 승인하지 않으면 해당 codepipeline은 fail 처리되어 종료됨
 8. DeployToProd stage
    - `검색어추천` 운영 서비스에 새로운 버전의 도커 이미지 배포
+
+
+AWS ECS 클러스터 구축
+👉 https://ninano1109.tistory.com/category/AWS/ECS
+
+AWS CodePipeline 구축
+👉 https://ninano1109.tistory.com/169?category=1050615
