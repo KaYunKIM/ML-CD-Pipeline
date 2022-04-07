@@ -12,6 +12,7 @@
 
 
 
+
 ### AWS CodePipeline 배포 아키텍처
 
 ![aws_codepipeline](imgs/aws_codepipeline.png)
