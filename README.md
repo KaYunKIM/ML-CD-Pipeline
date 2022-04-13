@@ -8,7 +8,7 @@
 
 1. 각 고객사 검색어 학습(keyword DAGs)이 완료되면 
 2. sensor DAG(keyword_dag_dependency)가 센싱하고 있다가 
-3. keyword_train DAG를 trigger함
+3. keyword_train DAG trigger
 
 
 
