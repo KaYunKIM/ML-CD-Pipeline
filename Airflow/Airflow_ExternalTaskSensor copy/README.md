@@ -115,12 +115,6 @@ def get_client_names(**context):
 ### 3. Clients yaml 파일을 이용한 전체 고객사 tasksensor 생성하기
 
 ```python
-from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
-from airflow.operators.sensors import ExternalTaskSensor
-from airflow.contrib.hooks.slack_webhook_hook import SlackWebhookHook
-from datetime import timedelta, datetime
-import yaml
 
 def get_client_names(**context):
     with open("/data/airflow/G2R12N-DAGS/clients.yml", "r", encoding="utf-8") as f:
@@ -135,14 +129,6 @@ def get_client_names(**context):
 
 
 dag_name = "keyword_dag_dependency"
-
-default_args = {
-    "owner": "airflow",  # owner name of the DAG
-    "depends_on_past": False,  # whether to rely on previous task status
-    "start_date": datetime(2021, 4, 30),  # start date of task instance
-    "retries": 1,  # retry the task once, if it fails
-    "retry_delay": timedelta(minutes=3),  # after waiting for 3 min
-}
 
 with DAG(dag_name, default_args=default_args, schedule_interval="0 6 * * *") as dag:
 
