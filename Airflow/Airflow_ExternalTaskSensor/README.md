@@ -87,9 +87,7 @@ with DAG(dag_name, default_args=default_args, schedule_interval="55 16 * * *") a
 
 task들을의 리스트 자체를 task dependency에 추가하려고 했지만, task 리스트들이 만들어지지 않음.
 
-![Screen Shot 2021-07-22 at 1.29.22 PM](img/Screen Shot 2021-07-22 at 1.29.22 PM.png)
-
-
+![DAG](img/DAG.png)
 
 ### 2. DAG name 파싱해서 고객사 sensor task 만들기
 
@@ -157,7 +155,7 @@ with DAG(dag_name, default_args=default_args, schedule_interval="0 6 * * *") as 
 
 - For문으로 돌면서 고객사 각각의 ExternalTaskSensor를 생성하고, keyword_train DAG를 수동으로 실행하는 명령문을 실행하는 task끼리의 TASK dependency 생성하기 
 
-  ![Screen Shot 2021-08-02 at 4.06.53 PM](img/Screen Shot 2021-08-02 at 4.06.53 PM.png)
+  ![sensor](img/sensor.png)
 
 
 
